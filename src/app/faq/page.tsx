@@ -147,7 +147,7 @@ const Faq=()=>
 
         </div>
         <div className="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-          style={{ backgroundImage: "url('/img/faq.jpg')" }}>&nbsp;</div>
+          style={{ backgroundImage: "url('assets/img/faq.jpg')" }}>&nbsp;</div>
       </div>
     </div>
   </section>

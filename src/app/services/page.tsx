@@ -80,7 +80,7 @@ const OurServices = () => {
                             </div>
                             <div className="col-lg-4 order-2 order-lg-2 text-center" data-aos="fade-up"
                                 data-aos-delay="200">
-                                <img src="@/assets/img/features-1.svg" alt="" className="img-fluid" />
+                                <img src="assets/img/features-1.svg" alt="" className="img-fluid" />
                             </div>
                         </div>
                     </div>{/* End Tab Content 1 */}
@@ -109,7 +109,7 @@ const OurServices = () => {
 
                             </div>
                             <div className="col-lg-4 order-2 order-lg-2 text-center">
-                                <img src="@/assets/img/features-2.svg" alt="" className="img-fluid" width="250" />
+                                <img src="assets/img/features-2.svg" alt="" className="img-fluid" width="250" />
                             </div>
                         </div>
                     </div>{/* End Tab Content 2 */}
@@ -139,7 +139,7 @@ const OurServices = () => {
                                 </p>
                             </div>
                             <div className="col-lg-4 order-2 order-lg-2 text-center">
-                                <img src="@/assets/img/features-3.svg" alt="" className="img-fluid" />
+                                <img src="/assets/img/features-3.svg"  alt="" className="img-fluid" />
                             </div>
                         </div>
                     </div>{/* End Tab Content 3 */}
@@ -165,7 +165,7 @@ const OurServices = () => {
 
                             </div>
                             <div className="col-lg-4 order-2 order-lg-2 text-center">
-                                <img src="@/assets/img/features-4.svg" alt="" width="350" className="img-fluid" />
+                                <img src="/assets/img/features-4.svg" alt="" width="350" className="img-fluid" />
                             </div>
                         </div>
                     </div>{/* End Tab Content 4 */}
@@ -207,7 +207,7 @@ const OurServices = () => {
                                 </p>
                             </div>
                             <div className="col-lg-4 order-2 order-lg-2 text-center">
-                                <img src="@/assets/img/features-5.svg" alt="" width="900" className="img-fluid" />
+                                <img src="/assets/img/features-5.svg" alt="" width="900" className="img-fluid" />
                             </div>
                         </div>
                     </div>{/* End Tab Content 5 */}
