@@ -5,7 +5,7 @@ import { collection, addDoc } from "firebase/firestore";
 
 async function addDataToFireStore (name: string, email: string, subject: string, message: string) {
     try {
-      const docRef = await addDoc(collection(db, "contact"), {
+      const docRef = await addDoc(collection(db, "contacts"), {
         name: name,
         email: email,
         subject: subject,
@@ -28,15 +28,43 @@ const Contact = () => {
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      const added = await addDataToFireStore(name, email, subject,message);
-      if (added) {
-        setName("");
-        setEmail("");
-        setMessage("");
-        setSubject("");
-      
-        alert("Data added to firestore DB!!")
+      try {
+        const response = await fetch("api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, subject, message }),
+        });
+  
+        if (response.ok) {
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+  
+          alert("message send successfully and data store in database");
+          console.log({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+          });
+        } else {
+          alert("Error");
+        }
+      } catch (error) {
+        console.log(error);
       }
+    //   const added = await addDataToFireStore(name, email, subject,message);
+    //   if (added) {
+    //     setName("");
+    //     setEmail("");
+    //     setMessage("");
+    //     setSubject("");
+      
+    //     alert("Data added to firestore DB!!")
+    //   }
     };
   
     return (

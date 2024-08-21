@@ -1,4 +1,5 @@
 import React from 'react';
+import NewsLetter from '../newsletter/page';
 
 const Footer = () => {
     return (
@@ -39,14 +40,12 @@ const Footer = () => {
                         </div>
                         */}
 
-                        <div className="col-lg-4 col-md-6 footer-newsletter">
+                        <div className=" col-md-7 footer-newsletter">
                             <h4>Our Newsletter</h4>
                             <p>Stay informed and never miss out on the latest updates with our newsletter subscription</p>
-                            <form action="" method="post">
-                                <input type="email" name="email" /><input type="submit" value="Subscribe" />
-                            </form>
-                            {/* Ensure Newsletter component is defined and imported */}
-                            {/* <Newsletter /> */}
+                           
+                            Ensure Newsletter component is defined and imported */}
+                             <NewsLetter />
                         </div>
                     </div>
                 </div>

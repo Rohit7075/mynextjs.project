@@ -12,6 +12,7 @@ import '../../public/assets/vendor/glightbox/css/glightbox.css'
 import '../../public/assets/vendor/glightbox/css/glightbox.min.css';
 import '../../public/assets/vendor/swiper/swiper-bundle.min.css';
 import '../../public/assets/vendor/aos/aos.css'; // import AOS CSS
+import { AuthProvider } from './context/authContext';
 
 
 export const metadata = {
@@ -36,8 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i' rel='stylesheet' />
       </head>
       <body>
-        
+        <AuthProvider>
         {children}
+        </AuthProvider>
+     
         
         <Script src="assets/js/main.js" />
         <Script src="assets/vendor/aos/aos.js" />

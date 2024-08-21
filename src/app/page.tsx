@@ -16,12 +16,16 @@ import Footer from "./footer/page"
 import Contact from "./contact/page"
 
 
+
+
+
 export default function Home () {
     useEffect (() => {
         aos.init();
     },[])
     return (
         <>
+        
          <Header/>
          <Hero/>
          <Target/>
@@ -31,7 +35,9 @@ export default function Home () {
          <Services/>
          <Faq/>
          <Contact/>
+      
          <Footer/>
+       
 
         <Link href='#' id='back-to-top' className='back-to-top d-flex align-items-center justify-content-center'>
                 <i className='bi bi-arrow-up-short'></i>
