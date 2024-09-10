@@ -1,18 +1,23 @@
 "use client";
 
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';  // Import PropTypes for type checking
 
 const Sidebar = ({ setView }) => {
   const [activeButton, setActiveButton] = useState('side-1');
 
   const handleClick = (buttonId, view) => {
     setActiveButton(buttonId);
-    setView(view);
+    if (typeof setView === 'function') {
+      setView(view);  // Ensure setView is a function before calling it
+    } else {
+      console.error('setView is not a valid function');
+    }
   };
 
   return (
     <div className="d-flex flex-column p-3 sidebar-panel">
-      <h4 style={{color: "#fff"}}>Admin Dashboard</h4>
+      <h4 style={{ color: "#fff" }}>Admin Dashboard</h4>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
@@ -38,6 +43,11 @@ const Sidebar = ({ setView }) => {
       </ul>
     </div>
   );
+};
+
+// Add PropTypes to validate the props
+Sidebar.propTypes = {
+  setView: PropTypes.func.isRequired,  // Ensure setView is passed as a function
 };
 
 export default Sidebar;
