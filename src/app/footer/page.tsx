@@ -44,7 +44,7 @@ const Footer = () => {
                             <h4>Our Newsletter</h4>
                             <p>Stay informed and never miss out on the latest updates with our newsletter subscription</p>
                            
-                            Ensure Newsletter component is defined and imported */}
+                            Ensure Newsletter component is defined and imported 
                              <NewsLetter />
                         </div>
                     </div>
